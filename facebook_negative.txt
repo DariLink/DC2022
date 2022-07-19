@@ -1,0 +1,22 @@
+Number of documents per topic : [12027  8879 14364 10905  8566  8267 12425 10449  7372  9806]
+Most important clusters (by number of docs inside): [2 6 0 3 7 9 1 4 5 8]
+
+Cluster 2 : [('zug', 4336), ('fahren', 4140), ('verspätung', 2094), ('auto', 1898), ('ticket', 1234), ('stunde', 1224), ('€', 883), ('stehen', 865), ('strecke', 830), ('arbeit', 813), ('leute', 793), ('minute', 759), ('bekommen', 723), ('euro', 719), ('bahnhof', 649)]
+
+Cluster 6 : [('ticket', 4508), ('personenverkehr', 2937), ('buchen', 1735), ('bekommen', 1475), ('kaufen', 1411), ('fahren', 1243), ('app', 1058), ('stornieren', 1050), ('zug', 1023), ('geld', 988), ('antwort', 979), ('reise', 951), ('hallo', 904), ('nutzen', 878), ('fahrt', 832)]
+
+Cluster 0 : [('zug', 4481), ('fahren', 3242), ('verspätung', 1774), ('ice', 1600), ('personenverkehr', 1359), ('hbf', 1090), ('stehen', 1053), ('minute', 1013), ('stunde', 887), ('app', 853), ('strecke', 833), ('berlin', 825), ('bahnhof', 809), ('frankfurt', 706), ('hamburg', 678)]
+
+Cluster 3 : [('gdl', 403), ('streik', 351), ('streiken', 308), ('frank', 281), ('kommentar', 257), ('lokführer', 242), ('fahren', 234), ('wissen', 226), ('andreas', 213), ('sehen', 211), ('zug', 192), ('bekommen', 185), ('markus', 184), ('denken', 179), ('peter', 178)]
+
+Cluster 7 : [('mensch', 584), ('kommentar', 510), ('leder', 489), ('sehen', 401), ('lesen', 344), ('finden', 317), ('verstehen', 278), ('schreiben', 276), ('wissen', 262), ('personenverkehr', 253), ('tier', 252), ('leben', 250), ('leute', 235), ('thema', 230), ('matthias', 228)]
+
+Cluster 9 : [('zug', 1027), ('fahren', 795), ('geld', 743), ('kunde', 653), ('streik', 521), ('bekommen', 465), ('mensch', 463), ('sehen', 449), ('verspätung', 438), ('problem', 426), ('leute', 425), ('unternehmen', 405), ('mitarbeiter', 388), ('arbeiten', 374), ('personenverkehr', 365)]
+
+Cluster 1 : [('maske', 2409), ('zug', 2180), ('tragen', 1290), ('fahren', 931), ('personenverkehr', 778), ('leute', 663), ('mensch', 637), ('sehen', 627), ('sitzen', 605), ('fahrgast', 603), ('halten', 548), ('ice', 460), ('corona', 455), ('maskenpflicht', 454), ('mitarbeiter', 444)]
+
+Cluster 4 : [('zug', 1809), ('platz', 1209), ('ice', 1106), ('sitz', 950), ('klasse', 946), ('fahren', 830), ('sitzen', 628), ('wagen', 578), ('stehen', 504), ('sitzplatz', 475), ('1.', 427), ('reservieren', 412), ('ticket', 397), ('fahrrad', 396), ('sehen', 395)]
+
+Cluster 5 : [('zug', 1096), ('fahren', 911), ('ice', 629), ('strecke', 588), ('sehen', 423), ('bahnhof', 361), ('deutschland', 308), ('km', 287), ('gleis', 281), ('stehen', 279), ('h', 261), ('problem', 250), ('strom', 216), ('baum', 210), ('bauen', 199)]
+
+Cluster 8 : [('ostereier', 236), ('personenverkehr', 108), ('daniel', 105), ('patrick', 92), ('christian', 78), ('michael', 77), ('florian', 75), ('zug', 67), (':/', 67), ('sehen', 67), ('uelzen', 65), ('siegen', 65), ('benjamin', 60), ('https', 57), ('stimmen', 56)]

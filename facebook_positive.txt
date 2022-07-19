@@ -1,0 +1,22 @@
+Number of documents per topic : [2341  988 1325 1571 1084 2185 3517 1765 3476 2917]
+Most important clusters (by number of docs inside): [6 8 9 0 5 7 3 2 4 1]
+
+Cluster 6 : [('fahren', 642), ('zug', 481), ('ice', 417), ('finden', 209), ('auto', 205), ('berlin', 146), ('hamburg', 139), ('fahrt', 137), ('personenverkehr', 136), ('ticket', 127), ('schön', 123), ('sehen', 114), ('klasse', 114), ('ic', 98), ('platz', 95)]
+
+Cluster 8 : [('personenverkehr', 1327), ('danken', 650), ('antwort', 422), ('schnell', 344), ('danke', 326), ('info', 178), ('dankeschön', 139), ('schön', 115), ('konzern', 101), ('lieben', 79), ('super', 75), ('ok', 65), ('bleiben', 59), ('infos', 58), ('wünschen', 53)]
+
+Cluster 9 : [('schön', 190), ('idee', 139), ('ice', 125), ('br', 97), ('toll', 86), ('super', 84), ('sehen', 81), ('bild', 80), ('michael', 61), ('aktion', 61), ('tolle', 56), ('foto', 52), ('danken', 49), ('personenverkehr', 44), ('wünschen', 35)]
+
+Cluster 0 : [('leipzig', 148), ('berlin', 146), ('hauptbahnhof', 140), ('schön', 95), ('bahnhof', 91), ('frankfurt', 84), ('hamburg', 73), ('hbf', 73), ('karlsruhe', 65), ('dresden', 65), ('sehen', 54), ('jordan', 52), ('bremen', 47), ('keigu', 46), ('stimmen', 45)]
+
+Cluster 5 : [('zug', 185), ('finden', 179), ('fahren', 172), ('wünschen', 94), ('gut', 91), ('toll', 86), ('mitarbeiter', 83), ('freuen', 70), ('geben', 68), ('service', 63), ('meckern', 62), ('kollege', 61), ('personenverkehr', 59), ('schön', 58), ('sehen', 56)]
+
+Cluster 7 : [('finden', 146), ('zug', 108), ('app', 92), ('fahren', 61), ('personenverkehr', 59), ('funktionieren', 58), ('leute', 56), ('sehen', 53), ('giuliano', 53), ('haberecht', 53), ('meckern', 50), ('mensch', 48), ('matthias', 43), ('wissen', 41), ('helfen', 38)]
+
+Cluster 3 : [('ice', 137), ('sitz', 86), ('klasse', 84), ('finden', 52), ('zug', 49), ('marcel', 45), ('fahren', 42), ('oliver', 42), ('stimmen', 40), ('frank', 38), ('thomas', 36), ('platz', 26), ('sehen', 25), ('danken', 24), ('1.', 24)]
+
+Cluster 2 : [('ticket', 279), ('personenverkehr', 191), ('buchen', 145), ('fahren', 104), ('app', 89), ('finden', 81), ('fahrt', 76), ('hallo', 70), ('nutzen', 69), ('bekommen', 60), ('antwort', 58), ('€', 57), ('gutschein', 55), ('danken', 54), ('kaufen', 49)]
+
+Cluster 4 : [('finden', 107), ('sitz', 88), ('leder', 69), ('sehen', 60), ('mensch', 41), ('alternative', 37), ('echt', 32), ('geheimnisvoll', 32), ('farbe', 30), ('freuen', 28), ('ice', 25), ('tier', 25), ('personenverkehr', 23), ('alt', 23), ('alexander', 22)]
+
+Cluster 1 : [('zug', 81), ('finden', 58), ('maske', 44), ('fahren', 37), ('mensch', 29), ('land', 29), ('deutschland', 28), ('wagen', 28), ('auto', 27), ('tragen', 27), ('verstehen', 25), ('gut', 23), ('ice', 23), ('bahnhof', 23), ('sehen', 22)]

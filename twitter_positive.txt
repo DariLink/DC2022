@@ -1,0 +1,22 @@
+Number of documents per topic : [  622  1435  1993   427   213  1130  2356  1079  4384 10159]
+Most important clusters (by number of docs inside): [9 8 6 2 1 5 7 0 3 4]
+
+Cluster 9 : [('@db_bahn', 8683), ('danke', 3364), ('danken', 1771), ('schnell', 940), ('antwort', 871), ('schön', 702), ('info', 561), ('dankeschön', 526), ('ok', 475), ('super', 378), ('okay', 325), ('abend', 201), ('hilfe', 198), ('ah', 186), ('lieben', 178)]
+
+Cluster 8 : [('@db_bahn', 2607), ('zug', 650), ('fahren', 479), ('ice', 464), ('danke', 460), ('danken', 247), ('berlin', 209), ('fahrt', 195), ('stunde', 163), ('@db_info', 161), ('minute', 150), ('antwort', 128), ('schön', 121), ('personal', 120), ('finden', 118)]
+
+Cluster 6 : [('@db_bahn', 1433), ('ticket', 278), ('klasse', 217), ('buchen', 154), ('danke', 153), ('finden', 131), ('ice', 117), ('zug', 105), ('antwort', 101), ('fahren', 101), ('1.', 100), ('app', 89), ('danken', 88), ('fahrt', 88), ('bekommen', 78)]
+
+Cluster 2 : [('@db_bahn', 548), ('@db_presse', 497), ('zug', 172), ('fahren', 121), ('ice', 107), ('danke', 85), ('finden', 83), ('lieben', 77), ('klasse', 75), ('gut', 73), ('toll', 70), ('mensch', 64), ('greta', 63), ('service', 60), ('sehen', 49)]
+
+Cluster 1 : [('@db_bahn', 792), ('finden', 96), ('zug', 94), ('@db_presse', 83), ('platz', 68), ('danke', 58), ('sehen', 52), ('app', 49), ('ice', 45), ('frage', 38), ('wagen', 34), ('fehlen', 34), ('lieben', 33), ('reservieren', 30), ('sitzen', 29)]
+
+Cluster 5 : [('zug', 199), ('@db_bahn', 128), ('bahnhof', 91), ('wlan', 88), ('berlin', 78), ('fahrt', 70), ('fahren', 60), ('deutschland', 54), ('einsparen', 51), ('kwh', 48), ('simulator', 48), ('@db_presse', 44), ('beenden', 44), ('fernverkehr', 42), ('öpnv', 41)]
+
+Cluster 7 : [('@db_bahn', 221), ('for', 129), ('bahnhof', 103), ('thank', 102), ('modernisieren', 83), ('with', 63), ('love', 56), ('euro', 48), ('to', 45), ('like', 42), ('hauptbahnhof', 41), ('the', 38), ('modernisierung', 35), ('ju', 34), ('my', 32)]
+
+Cluster 0 : [('@db_bahn', 107), ('@db_presse', 49), ('fahren', 33), ('pünktlichkeit', 27), ('freuen', 20), ('deutsche', 20), ('km', 20), ('funktionieren', 19), ('gut', 17), ('internet', 16), ('zug', 15), ('sehen', 15), ('strecke', 14), ('toll', 14), ('deutschland', 14)]
+
+Cluster 3 : [('at', 50), ('best', 49), ('its', 45), ('@db_bahn', 38), ('@db_info', 20), ('danken', 13), ('bayern', 11), ('xd', 10), ('modernisierung', 9), ('unwetter', 9), ('bahnhof', 9), ("it's", 8), ('deutschland', 8), ('präsentieren', 8), ('fahren', 7)]
+
+Cluster 4 : [('modernisieren', 86), ('aktuell', 78), ('gewohnt', 76), ('netz', 75), ('tipp', 75), ('informieren', 75), ('baumaßnahm', 74), ('baumaßnahme', 74), ('fahrtantritt', 74), ('reiseauskunftsmedie', 74), ('schleswig-holstein', 43), ('niedersachsen', 24), ('regionds', 23), ('bremen', 23), ('badschwartau', 8)]

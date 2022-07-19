@@ -1,0 +1,22 @@
+Number of documents per topic : [1666 3096 1423 1233 3376 1071 3783 1741 3486 1481]
+Most important clusters (by number of docs inside): [6 8 4 1 7 0 9 2 3 5]
+
+Cluster 6 : [('@deutschebahn', 494), ('zug', 149), ('danken', 142), ('wissen', 139), ('antwort', 120), ('sehen', 112), ('mensch', 105), ('kommentar', 83), ('frage', 83), ('frau', 83), ('danke', 78), ('statement', 77), ('mann', 74), ('fahren', 73), ('lokführer', 70)]
+
+Cluster 8 : [('ice', 749), ('fahren', 513), ('zug', 316), ('bild', 183), ('strecke', 157), ('km', 138), ('@deutschebahn', 129), ('sehen', 124), ('bahnhof', 118), ('berlin', 114), ('h', 105), ('hbf', 103), ('frankfurt', 92), ('deutschland', 91), ('köln', 88)]
+
+Cluster 4 : [('fahren', 599), ('zug', 370), ('ticket', 317), ('ice', 294), ('berlin', 189), ('@deutschebahn', 179), ('ic', 141), ('hamburg', 133), ('gelten', 129), ('hbf', 122), ('strecke', 118), ('fahrt', 115), ('stunde', 109), ('€', 103), ('fernverkehr', 97)]
+
+Cluster 1 : [('zug', 329), ('fahren', 183), ('maske', 176), ('tragen', 119), ('@deutschebahn', 114), ('preis', 101), ('mensch', 100), ('land', 88), ('deutschland', 87), ('bekommen', 80), ('auto', 79), ('leute', 78), ('%', 74), ('sehen', 72), ('geld', 71)]
+
+Cluster 7 : [('fahren', 303), ('zug', 114), ('nutzen', 91), ('bahnhof', 86), ('fahrrad', 79), ('ice', 77), ('freund', 76), ('ticket', 73), ('mitnehmen', 72), ('reise', 66), ('italien', 60), ('verbringen', 59), ('@deutschebahn', 54), ('deutschland', 52), ('essen', 48)]
+
+Cluster 0 : [('l', 440), ('größe', 417), ('beeindrucken', 291), ('xl', 188), ('anzug', 89), ('xxl', 89), ('fahren', 71), ('ice', 67), ('trainingsanzug', 64), ('nächster', 60), ('weihnachten', 55), ('zug', 51), ('arbeiten', 47), ('familie', 47), ('tragen', 46)]
+
+Cluster 9 : [('zug', 68), ('denken', 39), ('mensch', 34), ('wissen', 33), ('kommentar', 33), ('leben', 33), ('sagen', 30), ('bekommen', 30), ('sehen', 29), ('schreiben', 29), ('thema', 28), ('frage', 28), ('hab', 27), ('stehen', 26), ('ice', 24)]
+
+Cluster 2 : [('ice', 76), ('@deutschebahn', 63), ('sehen', 50), ('zug', 37), ('rot', 37), ('fahren', 36), ('streifen', 34), ('geschichte', 30), ('media', 30), ('social', 28), ('alt', 28), ('br', 26), ('@dbpersonenverkehr', 24), ('schön', 24), ('denken', 23)]
+
+Cluster 3 : [('bleiben', 54), ('bild', 46), ('fahren', 40), ('klaas', 37), ('zug', 35), ('ne', 33), ('herzlosbahn', 31), ('lok', 24), ('knopf', 24), ('wagenreihung', 24), ('ice', 23), ('sehen', 23), ('fehlen', 23), ('stehen', 22), ('winter', 22)]
+
+Cluster 5 : [('fahren', 63), ('%', 62), ('strom', 62), ('ökostrom', 61), ('zug', 54), ('sylt', 51), ('strecke', 40), ('fernverkehr', 38), ('>', 37), ('bleiben', 34), ('hindenburgdamm', 34), ('bahnhof', 28), ('deutschland', 26), ('stehen', 24), ('gleis', 24)]

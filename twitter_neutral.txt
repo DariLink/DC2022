@@ -1,0 +1,22 @@
+Number of documents per topic : [21491  2793  4535  1247 20377 12923  4898 12142 10308  2303]
+Most important clusters (by number of docs inside): [0 4 5 7 8 6 2 1 9 3]
+
+Cluster 0 : [('@db_bahn', 13390), ('ticket', 2219), ('zug', 1725), ('danke', 1308), ('fahren', 1041), ('ice', 962), ('buchen', 866), ('frage', 863), ('@db_presse', 840), ('klasse', 758), ('gelten', 745), ('fahrt', 735), ('€', 677), ('antwort', 671), ('app', 655)]
+
+Cluster 4 : [('@db_bahn', 12200), ('fahren', 3982), ('ice', 3092), ('zug', 3064), ('hbf', 1680), ('berlin', 1284), ('stehen', 1218), ('frankfurt', 1070), ('gleis', 1063), ('@db_info', 974), ('köln', 958), ('ic', 950), ('minute', 942), ('re', 910), ('bahnhof', 849)]
+
+Cluster 5 : [('zug', 1065), ('@db_bahn', 891), ('berlin', 863), ('bahnhof', 822), ('euro', 796), ('ice', 714), ('fernverkehr', 653), ('@db_presse', 595), ('deutschland', 592), ('strecke', 560), ('stellen', 554), ('milliarde', 524), ('bahnfahren', 496), ('fahren', 488), ('amp', 476)]
+
+Cluster 7 : [('@db_bahn', 1921), ('@db_presse', 1209), ('deutschland', 581), ('unternehmen', 504), ('fahren', 478), ('%', 442), ('zug', 412), ('gdl', 387), ('mensch', 334), ('gehören', 328), ('sehen', 290), ('staat', 288), ('herr', 264), ('konzern', 244), ('palmer', 244)]
+
+Cluster 8 : [('@db_bahn', 2210), ('zug', 863), ('@db_presse', 817), ('ice', 600), ('fahren', 480), ('for', 419), ('schön', 297), ('greta', 291), ('ju', 282), ('sehen', 238), ('deutschland', 219), ('danke', 213), ('leben', 199), ('with', 192), ('mensch', 192)]
+
+Cluster 6 : [('greta', 668), ('thunberg', 522), ('deutschland', 377), ('train', 342), ('ice', 315), ('to', 305), ('germany', 304), ('berlin', 283), ('the', 277), ('@spiegelonline', 271), ('@', 228), ('verbocken', 226), ('siemens', 192), ('@db_bahn', 190), ('and', 189)]
+
+Cluster 2 : [('m', 1103), ('d', 1101), ('w', 1073), ('dbtraining', 489), ('berlin', 487), ('@db_presse', 476), ('amp', 345), ('suchen', 278), ('job', 269), ('@db_bahn', 268), ('ausbildung', 265), ('lernenrockt', 248), ('digital', 226), ('digitalisierung', 182), ('vollzeit', 157)]
+
+Cluster 1 : [('neu', 182), ('glyphosat', 172), ('strom', 139), ('@db_presse', 138), ('%', 133), ('info', 122), ('@db_bahn', 117), ('promotionjob', 117), ('deutschland', 114), ('deutsche', 108), ('ökostrom', 108), ('siemens', 106), ('sbb', 96), ('fahren', 90), ('zukunft', 85)]
+
+Cluster 9 : [('@changeger', 423), ('unterschreiben', 399), ('@db_presse', 293), ('€', 236), ('sitz', 200), ('echtleder', 194), ('amp', 170), ('gutschein', 163), ('petition', 144), ('bleiben', 127), ('stuttgart21', 124), ('stuttgart', 123), ('sinto', 121), ('ermordet', 118), ('mahnmal', 115)]
+
+Cluster 3 : [('digitalisierung', 627), ('lufthansa', 506), ('porsche', 471), ('digitaletransformation', 321), ('cases', 300), ('telekom', 282), ('buch', 269), ('eamkon', 266), ('digitalization', 250), ('praxis-beispiele', 250), ('volkswagen', 243), ('forschung', 205), ('wissenschaft', 200), ('wirtschaftsinformatik', 198), ('fraunhoferfit', 195)]

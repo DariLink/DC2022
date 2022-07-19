@@ -1,0 +1,22 @@
+Number of documents per topic : [3378 3575 5472 2992 7422 5007 9644 7478 5464 3918]
+Most important clusters (by number of docs inside): [6 7 4 2 8 5 9 1 0 3]
+
+Cluster 6 : [('zug', 2599), ('verspätung', 1801), ('fahren', 1482), ('stunde', 800), ('minute', 695), ('ice', 609), ('warten', 510), ('gleis', 495), ('stehen', 472), ('bahnhof', 450), ('strecke', 360), ('ausfallen', 318), ('hbf', 315), ('fahrt', 310), ('min', 293)]
+
+Cluster 7 : [('kommentar', 456), ('mensch', 442), ('@deutschebahn', 377), ('sehen', 260), ('rassismus', 240), ('leute', 227), ('statement', 200), ('sagen', 199), ('mitarbeiter', 196), ('antwort', 195), ('schreiben', 191), ('finden', 187), ('problem', 176), ('lassen', 171), ('denken', 168)]
+
+Cluster 4 : [('zug', 977), ('verspätung', 715), ('fahren', 675), ('geld', 525), ('leute', 372), ('auto', 324), ('problem', 300), ('streiken', 285), ('preis', 281), ('unternehmen', 249), ('bekommen', 248), ('arbeiten', 239), ('streik', 229), ('mensch', 219), ('deutschland', 210)]
+
+Cluster 2 : [('signal', 417), ('star', 211), ('silver', 207), ('puffer', 119), ('ziege', 100), ('statement', 88), ('dessau', 72), ('schiene', 68), ('the', 66), ('to', 57), ('c', 54), ('irre', 51), ('maschine', 49), ('hasnisworldwillseingeldwieder', 48), ('no', 47)]
+
+Cluster 8 : [('ticket', 1027), ('zug', 721), ('fahren', 639), ('€', 444), ('kaufen', 320), ('bekommen', 299), ('geld', 294), ('buchen', 278), ('preis', 238), ('auto', 228), ('euro', 228), ('kosten', 225), ('zahlen', 216), ('fahrt', 204), ('app', 201)]
+
+Cluster 5 : [('ice', 701), ('zug', 439), ('fahren', 435), ('sehen', 341), ('strecke', 253), ('sitz', 208), ('wagen', 159), ('bild', 155), ('alt', 149), ('finden', 147), ('ic', 141), ('%', 128), ('stehen', 122), ('strom', 122), ('wissen', 122)]
+
+Cluster 9 : [('sehen', 109), ('kommentar', 98), ('finden', 96), ('mensch', 89), ('zug', 71), ('schreiben', 71), ('denken', 59), ('meinung', 59), ('verstehen', 59), ('leute', 58), ('wissen', 57), ('hab', 57), ('c2', 56), ('bild', 54), ('@deutschebahn', 51)]
+
+Cluster 1 : [('zug', 662), ('maske', 431), ('sehen', 232), ('tragen', 208), ('ice', 170), ('mensch', 170), ('leute', 168), ('fahrgast', 167), ('stehen', 156), ('tür', 155), ('fahren', 143), ('platz', 141), ('mann', 138), ('sitzen', 136), ('einsteigen', 125)]
+
+Cluster 0 : [('ice', 305), ('fahren', 176), ('zug', 152), ('sehen', 93), ('streifen', 81), ('essen', 71), ('grün', 69), ('müll', 66), ('ne', 66), ('bahnhof', 64), ('nutzen', 64), ('mitnehmen', 51), ('kaffee', 50), ('rot', 49), ('ticket', 48)]
+
+Cluster 3 : [('l', 389), ('größe', 351), ('xl', 151), ('beeindrucken', 84), ('anzug', 74), ('xxl', 73), ('@deutschebahn', 51), ('ice', 48), ('familie', 42), ('zug', 39), ('u', 38), ('ne', 37), ('weihnachten', 34), ('wien', 33), ('freund', 33)]

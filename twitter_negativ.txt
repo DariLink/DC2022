@@ -1,0 +1,22 @@
+Number of documents per topic : [12145  3649 43199  5931  1878 17252 22315  5518 31754 17869]
+Most important clusters (by number of docs inside): [2 8 6 9 5 0 3 7 1 4]
+
+Cluster 2 : [('@db_bahn', 25517), ('zug', 14647), ('verspätung', 8924), ('fahren', 8414), ('ice', 6306), ('minute', 5575), ('stehen', 4358), ('stunde', 3083), ('app', 2719), ('warten', 2680), ('gleis', 2647), ('hbf', 2386), ('@db_info', 2335), ('berlin', 2203), ('strecke', 2172)]
+
+Cluster 8 : [('@db_bahn', 24152), ('ticket', 6131), ('app', 3464), ('buchen', 2730), ('zug', 2371), ('bekommen', 2187), ('danke', 2116), ('kaufen', 2115), ('bahncard', 1437), ('verbindung', 1435), ('antwort', 1434), ('problem', 1383), ('fahren', 1311), ('stehen', 1156), ('fahrt', 1125)]
+
+Cluster 6 : [('@db_bahn', 12212), ('zug', 4900), ('ice', 2586), ('maske', 1936), ('@db_presse', 1781), ('fahren', 1503), ('platz', 1461), ('wagen', 1360), ('sitzen', 1332), ('leute', 1096), ('stehen', 1091), ('klasse', 1058), ('tragen', 1011), ('fahrgast', 1003), ('maskenpflicht', 908)]
+
+Cluster 9 : [('@db_bahn', 7607), ('@db_presse', 4256), ('zug', 1161), ('greta', 1089), ('problem', 663), ('kunde', 658), ('antwort', 656), ('tweet', 631), ('@carinazimniok', 596), ('mensch', 588), ('fahren', 565), ('sehen', 546), ('finden', 544), ('danke', 431), ('mitarbeiter', 413)]
+
+Cluster 5 : [('@db_bahn', 4279), ('zug', 2324), ('verspätung', 2013), ('fahren', 1799), ('hassen', 1247), ('@db_presse', 988), ('stunde', 913), ('minute', 722), ('auto', 691), ('fick', 608), ('bekommen', 483), ('€', 461), ('geld', 433), ('ticket', 403), ('hab', 403)]
+
+Cluster 0 : [('@db_bahn', 1428), ('@db_presse', 1143), ('zug', 724), ('fahren', 702), ('deutschland', 641), ('geld', 630), ('euro', 522), ('milliarde', 497), ('%', 445), ('preis', 437), ('problem', 436), ('unternehmen', 412), ('schiene', 369), ('verspätung', 350), ('infrastruktur', 345)]
+
+Cluster 3 : [('zug', 550), ('@db_bahn', 532), ('strecke', 420), ('fernverkehr', 413), ('sperren', 365), ('berlin', 342), ('verspätung', 334), ('bahnhof', 303), ('bahnverkehr', 288), ('hamburg', 286), ('regionalverkehr', 270), ('fahren', 265), ('sturm', 264), ('bauarbeit', 260), ('zugverkehr', 260)]
+
+Cluster 7 : [('for', 1337), ('@db_bahn', 1191), ('sänk', 890), ('ju', 870), ('wis', 695), ('verspätung', 436), ('with', 413), ('thank', 350), ('the', 304), ('träwelling', 241), ('@db_presse', 232), ('zug', 221), ('to', 191), ('travelling', 169), ('i', 159)]
+
+Cluster 1 : [('gdl', 1667), ('streik', 1455), ('bahnstreik', 629), ('lokführer', 430), ('gewerkschaft', 400), ('tarifkonflikt', 353), ('lokführergewerkschaft', 315), ('weselsky', 305), ('gdlstreik', 291), ('arbeitskampf', 279), ('angebot', 220), ('@db_bahn', 189), ('bahnverkehr', 187), ('neu', 170), ('streiken', 169)]
+
+Cluster 4 : [('@db_bahn', 294), ('verspätung', 116), ('berlin', 78), ('verbindung', 71), ('@db_presse', 70), ('witz', 66), ('frankfurt', 62), ('ausfall', 62), ('zug', 59), ('@rzmontabaur', 53), ('montabaur', 52), ('nachmittag', 50), ('ice', 48), ('amp', 47), ('wlan', 47)]

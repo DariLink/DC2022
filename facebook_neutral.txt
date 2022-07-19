@@ -1,0 +1,22 @@
+Number of documents per topic : [3909 3878 5586 5871 1930 6673 1096 6625 5002 1043]
+Most important clusters (by number of docs inside): [5 7 3 2 8 0 1 4 6 9]
+
+Cluster 5 : [('fahren', 2050), ('zug', 1151), ('ice', 940), ('personenverkehr', 813), ('berlin', 543), ('hbf', 496), ('strecke', 401), ('hamburg', 398), ('ticket', 390), ('münchen', 384), ('ic', 378), ('köln', 335), ('frankfurt', 332), ('hallo', 329), ('verbindung', 269)]
+
+Cluster 7 : [('maske', 873), ('zug', 852), ('fahren', 631), ('tragen', 581), ('mensch', 342), ('personenverkehr', 326), ('auto', 258), ('platz', 227), ('sehen', 226), ('sitzen', 208), ('gelten', 197), ('stehen', 191), ('denken', 191), ('leute', 189), ('halten', 188)]
+
+Cluster 3 : [('fahren', 268), ('zug', 194), ('wissen', 188), ('mensch', 167), ('arbeiten', 151), ('andreas', 149), ('lokführer', 138), ('denken', 132), ('schreiben', 129), ('verstehen', 127), ('leben', 125), ('thomas', 120), ('matthias', 117), ('lesen', 114), ('arbeit', 112)]
+
+Cluster 2 : [('fahren', 864), ('zug', 814), ('ice', 494), ('strecke', 329), ('km', 295), ('deutschland', 254), ('h', 227), ('wagen', 198), ('land', 191), ('nahverkehr', 183), ('sitz', 175), ('sehen', 158), ('n', 153), ('klasse', 151), ('fernverkehr', 147)]
+
+Cluster 8 : [('ticket', 1325), ('personenverkehr', 773), ('fahren', 474), ('gelten', 362), ('buchen', 360), ('€', 344), ('euro', 297), ('nutzen', 291), ('zug', 282), ('fahrt', 271), ('kaufen', 269), ('hallo', 254), ('bekommen', 230), ('frage', 219), ('gutschein', 217)]
+
+Cluster 0 : [('ice', 318), ('fahren', 310), ('zug', 284), ('bahnhof', 238), ('sehen', 206), ('br', 181), ('berlin', 175), ('hbf', 141), ('leipzig', 134), ('stehen', 133), ('baureihe', 126), ('bild', 122), ('köln', 109), ('gleis', 106), ('strecke', 105)]
+
+Cluster 1 : [('fahren', 120), ('gehören', 119), ('gdl', 105), ('%', 101), ('patrick', 101), ('stehen', 100), ('wissen', 100), ('zug', 95), ('deutschland', 94), ('frank', 90), ('bekommen', 88), ('baum', 88), ('liegen', 86), ('denken', 85), ('michael', 81)]
+
+Cluster 4 : [('klasse', 51), ('bleiben', 50), ('froh', 49), ('wünschen', 46), ('zug', 45), ('fahren', 43), ('schön', 43), ('ostern', 40), ('kollege', 39), (':/', 37), ('kind', 36), ('nikolaus', 36), ('rieskamp', 33), ('sehen', 32), ('daniel', 31)]
+
+Cluster 6 : [(':/', 816), ('https', 753), ('=', 273), ('www', 110), ('youtu.be', 94), ('watch', 65), ('de', 62), ('e', 52), ('wirtschaft', 50), ('v', 48), ('personenverkehr', 47), ('deutschland', 34), ('.de', 33), ('%', 32), ('sehen', 31)]
+
+Cluster 9 : [('grüße', 419), ('hallo', 418), ('personenverkehr', 276), (':/', 241), ('https', 181), ('r', 175), ('frage', 168), ('kolleg*in', 168), ('m', 166), ('helfen', 161), ('www.facebook.co', 152), ('fahrt', 140), ('thema', 135), ('informieren', 122), ('konzern', 118)]
