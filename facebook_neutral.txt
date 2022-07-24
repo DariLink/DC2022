@@ -20,3 +20,15 @@ Cluster 4 : [('klasse', 51), ('bleiben', 50), ('froh', 49), ('wünschen', 46), (
 Cluster 6 : [(':/', 816), ('https', 753), ('=', 273), ('www', 110), ('youtu.be', 94), ('watch', 65), ('de', 62), ('e', 52), ('wirtschaft', 50), ('v', 48), ('personenverkehr', 47), ('deutschland', 34), ('.de', 33), ('%', 32), ('sehen', 31)]
 
 Cluster 9 : [('grüße', 419), ('hallo', 418), ('personenverkehr', 276), (':/', 241), ('https', 181), ('r', 175), ('frage', 168), ('kolleg*in', 168), ('m', 166), ('helfen', 161), ('www.facebook.co', 152), ('fahrt', 140), ('thema', 135), ('informieren', 122), ('konzern', 118)]
+
+Number of documents per topic : [3909 3878 5586 5871 1930 6673 1096 6625 5002 1043]
+
+Cluster 0: ("Fragen zur Verbindung und zur Ticketbuchung", 11675)
+Cluster 1: ("Maskenpflicht und Auto als Alternative", 6625)
+Cluster 2: ("Arbeiten bei der DB/Stellenanzeigen", 5871)
+Cluster 3: ("Fahrkomfort, Fahrerlebnis", 5586)
+Cluster 4: ("Pressebeiträge", 3909)
+Cluster 5: ("Fahrtverzögerungen wegen Streik, umgefallener Baum etc.", 3878)
+Cluster 6: ("Beträge zu Feiertagen", 1930)
+Cluster 7: ("Links zu externen Quellen", 1096)
+Cluster 8: ("Allgemeine Infos zum Konzern", 1043)

@@ -20,3 +20,11 @@ Cluster 2 : [('ticket', 279), ('personenverkehr', 191), ('buchen', 145), ('fahre
 Cluster 4 : [('finden', 107), ('sitz', 88), ('leder', 69), ('sehen', 60), ('mensch', 41), ('alternative', 37), ('echt', 32), ('geheimnisvoll', 32), ('farbe', 30), ('freuen', 28), ('ice', 25), ('tier', 25), ('personenverkehr', 23), ('alt', 23), ('alexander', 22)]
 
 Cluster 1 : [('zug', 81), ('finden', 58), ('maske', 44), ('fahren', 37), ('mensch', 29), ('land', 29), ('deutschland', 28), ('wagen', 28), ('auto', 27), ('tragen', 27), ('verstehen', 25), ('gut', 23), ('ice', 23), ('bahnhof', 23), ('sehen', 22)]
+
+Number of documents per topic : [2341  988 1325 1571 1084 2185 3517 1765 3476 2917]
+
+Cluster 0: ("Fahrkomfort", 7160)
+Cluster 1: ("Service", 5661)
+Cluster 2: ("Presse, PR Aktionen", 2917)
+Cluster 3: ("Bahnhöfe und Städte", 2341)
+Cluster 4: ("Ticketbuchung, Nutzung der App, Gutschein, Fahrerlebnis", 3090)

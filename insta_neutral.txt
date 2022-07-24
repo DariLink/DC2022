@@ -20,3 +20,13 @@ Cluster 2 : [('ice', 76), ('@deutschebahn', 63), ('sehen', 50), ('zug', 37), ('r
 Cluster 3 : [('bleiben', 54), ('bild', 46), ('fahren', 40), ('klaas', 37), ('zug', 35), ('ne', 33), ('herzlosbahn', 31), ('lok', 24), ('knopf', 24), ('wagenreihung', 24), ('ice', 23), ('sehen', 23), ('fehlen', 23), ('stehen', 22), ('winter', 22)]
 
 Cluster 5 : [('fahren', 63), ('%', 62), ('strom', 62), ('ökostrom', 61), ('zug', 54), ('sylt', 51), ('strecke', 40), ('fernverkehr', 38), ('>', 37), ('bleiben', 34), ('hindenburgdamm', 34), ('bahnhof', 28), ('deutschland', 26), ('stehen', 24), ('gleis', 24)]
+
+[1666 3096 1423 1233 3376 1071 3783 1741 3486 1481]
+
+Cluster 6: ("Online Service", 3783)
+Cluster 8: ("Zugfahrt allgemein, Fahrkomfort", 13122)
+Cluster 0: ("Kleidung", 1666)
+Cluster 9: ("Diskussionen von Nutzern untereinander", 1481)
+Cluster 3: ("Unzuverlässigkeit", 1233)
+Cluster 5: ("Umwelt", 1071)
+

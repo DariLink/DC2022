@@ -20,3 +20,13 @@ Cluster 7 : [('for', 1337), ('@db_bahn', 1191), ('sänk', 890), ('ju', 870), ('w
 Cluster 1 : [('gdl', 1667), ('streik', 1455), ('bahnstreik', 629), ('lokführer', 430), ('gewerkschaft', 400), ('tarifkonflikt', 353), ('lokführergewerkschaft', 315), ('weselsky', 305), ('gdlstreik', 291), ('arbeitskampf', 279), ('angebot', 220), ('@db_bahn', 189), ('bahnverkehr', 187), ('neu', 170), ('streiken', 169)]
 
 Cluster 4 : [('@db_bahn', 294), ('verspätung', 116), ('berlin', 78), ('verbindung', 71), ('@db_presse', 70), ('witz', 66), ('frankfurt', 62), ('ausfall', 62), ('zug', 59), ('@rzmontabaur', 53), ('montabaur', 52), ('nachmittag', 50), ('ice', 48), ('amp', 47), ('wlan', 47)]
+
+Number of documents per topic : [12145  3649 43199  5931  1878 17252 22315  5518 31754 17869]
+Cluster 2: ("Verspätung, Zuverlässigkeit", 62329)
+Cluster 8: ("Ticketbuchung", 31754)
+Cluster 6: ("Maskenpflicht", 22315)
+Cluster 9: ("PR Beiträge", 17869)
+Cluster 0: ("Preis-/Leistungsverhältnis", 12145)
+Cluster 3: ("Bauarbeiten, Streckensperrungen, Verspätungen", 5931)
+Cluster 7: ("Ironische Beiträge, Verspätung, sänk ju...", 5518)
+Cluster 1: ("Streik", 3649)

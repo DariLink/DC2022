@@ -20,3 +20,11 @@ Cluster 2 : [('sehen', 63), ('ice', 56), ('glückwunsch', 44), ('geheimnisvoll',
 Cluster 1 : [('lol', 28), ('the', 21), ('g', 16), ('for', 16), ('yeah', 15), ('ne', 13), ('mensch', 12), ('stimmen', 12), ('@dbpersonenverkehr', 11), ('like', 10), ('köf', 9), ('ju', 9), ('of', 9), ('best', 9), ('please', 8)]
 
 Cluster 3 : [('bahnhof', 19), ('deutschland', 17), ('schön', 14), ('vegan', 13), ('bahnschranke', 13), ('heul', 12), ('safe', 12), ('fahren', 11), ('essen', 11), ('zug', 9), ('hamburg', 9), ('kennen', 9), ('dach', 9), ('hannover', 9), ('shut', 9)]
+
+[1714  708  910  592 1571 1153 1409 1548 3836 1288]
+Cluster 8: ("Züge", 3836)
+Cluster 0: ("Fahrkomfort", 7031)
+Cluster 6: ("Service und Pünktlichkeit", 1409)
+Cluster 5: ("Kleidung", 1153)
+Cluster 1: ("Kommentare über andere Beiträge und Kommentare", 708)
+Cluster 3: ("Bahnhöfe", 592)

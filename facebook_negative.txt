@@ -20,3 +20,15 @@ Cluster 4 : [('zug', 1809), ('platz', 1209), ('ice', 1106), ('sitz', 950), ('kla
 Cluster 5 : [('zug', 1096), ('fahren', 911), ('ice', 629), ('strecke', 588), ('sehen', 423), ('bahnhof', 361), ('deutschland', 308), ('km', 287), ('gleis', 281), ('stehen', 279), ('h', 261), ('problem', 250), ('strom', 216), ('baum', 210), ('bauen', 199)]
 
 Cluster 8 : [('ostereier', 236), ('personenverkehr', 108), ('daniel', 105), ('patrick', 92), ('christian', 78), ('michael', 77), ('florian', 75), ('zug', 67), (':/', 67), ('sehen', 67), ('uelzen', 65), ('siegen', 65), ('benjamin', 60), ('https', 57), ('stimmen', 56)]
+
+Number of documents per topic : [12027  8879 14364 10905  8566  8267 12425 10449  7372  9806]
+
+Cluster 0: ("Zuverlässigkeit, Preis, Auto als Alternative", 14364)
+Cluster 1: ("Ticketbuchung, Preis, App, Stornierung, Service", 12425)
+Cluster 2: ("Verspätung/Zuverlässigkeit, 19399)
+Cluster 3: ("Streik, gdl", 10905)
+Cluster 4: ("Leder, Tierschutz", 10449)
+Cluster 5: ("Zuverlässigkeit und Service bei Problemen", 9806)
+Cluster 6: ("Maskenpflicht", 8879)
+Cluster 7: ("Komfort im Zug v.a. ICE", 8566)
+Cluster 8: ("Baustellen, Streckensperrung, Zuverlässigkeit", 8267)

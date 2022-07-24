@@ -20,3 +20,12 @@ Cluster 1 : [('neu', 182), ('glyphosat', 172), ('strom', 139), ('@db_presse', 13
 Cluster 9 : [('@changeger', 423), ('unterschreiben', 399), ('@db_presse', 293), ('€', 236), ('sitz', 200), ('echtleder', 194), ('amp', 170), ('gutschein', 163), ('petition', 144), ('bleiben', 127), ('stuttgart21', 124), ('stuttgart', 123), ('sinto', 121), ('ermordet', 118), ('mahnmal', 115)]
 
 Cluster 3 : [('digitalisierung', 627), ('lufthansa', 506), ('porsche', 471), ('digitaletransformation', 321), ('cases', 300), ('telekom', 282), ('buch', 269), ('eamkon', 266), ('digitalization', 250), ('praxis-beispiele', 250), ('volkswagen', 243), ('forschung', 205), ('wissenschaft', 200), ('wirtschaftsinformatik', 198), ('fraunhoferfit', 195)]
+
+Number of documents per topic : [21491  2793  4535  1247 20377 12923  4898 12142 10308  2303]
+Cluster 0: ("Kundenservice", 41868)
+Cluster 5: ("Preis-/Leistungsverhältnis", 12923)
+Cluster 7: ("Pressebeiträge allgemein", 12142)
+Cluster 8: ("Pressebeiträge, speziell auf Umwelt bezogen", 17999)
+Cluster 2: ("Stellenausschreibungen", 4535)
+Cluster 9: ("Petitionen, DB bezogene Aktionen (z.B. Stuttgart 21)", 2303)
+Cluster 3: ("Digitalisierung", 1247)

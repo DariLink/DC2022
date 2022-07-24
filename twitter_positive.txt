@@ -20,3 +20,9 @@ Cluster 0 : [('@db_bahn', 107), ('@db_presse', 49), ('fahren', 33), ('pünktlich
 Cluster 3 : [('at', 50), ('best', 49), ('its', 45), ('@db_bahn', 38), ('@db_info', 20), ('danken', 13), ('bayern', 11), ('xd', 10), ('modernisierung', 9), ('unwetter', 9), ('bahnhof', 9), ("it's", 8), ('deutschland', 8), ('präsentieren', 8), ('fahren', 7)]
 
 Cluster 4 : [('modernisieren', 86), ('aktuell', 78), ('gewohnt', 76), ('netz', 75), ('tipp', 75), ('informieren', 75), ('baumaßnahm', 74), ('baumaßnahme', 74), ('fahrtantritt', 74), ('reiseauskunftsmedie', 74), ('schleswig-holstein', 43), ('niedersachsen', 24), ('regionds', 23), ('bremen', 23), ('badschwartau', 8)]
+
+Number of documents per topic : [  622  1435  1993   427   213  1130  2356  1079  4384 10159]
+Cluster 9: ("Kundenservice", 10159)
+Cluster 8: ("Fahrkomfort an Bord, Ausstattung (z.B. WLAN), Personal", 9564)
+Cluster 6: ("Ticketbuchung", 2356)
+Cluster 4: ("Modernisierung der Bahnhöfe und des Streckennetzes", 1719)

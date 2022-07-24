@@ -20,3 +20,13 @@ Cluster 1 : [('zug', 662), ('maske', 431), ('sehen', 232), ('tragen', 208), ('ic
 Cluster 0 : [('ice', 305), ('fahren', 176), ('zug', 152), ('sehen', 93), ('streifen', 81), ('essen', 71), ('grün', 69), ('müll', 66), ('ne', 66), ('bahnhof', 64), ('nutzen', 64), ('mitnehmen', 51), ('kaffee', 50), ('rot', 49), ('ticket', 48)]
 
 Cluster 3 : [('l', 389), ('größe', 351), ('xl', 151), ('beeindrucken', 84), ('anzug', 74), ('xxl', 73), ('@deutschebahn', 51), ('ice', 48), ('familie', 42), ('zug', 39), ('u', 38), ('ne', 37), ('weihnachten', 34), ('wien', 33), ('freund', 33)]
+
+[3378 3575 5472 2992 7422 5007 9644 7478 5464 3918]
+Cluster 6: ("Zuverlässigkeit, Verspätung", 22538)
+Cluster 7: ("Umgang mit Fahrgästen", 7478)
+Cluster 8: ("Ticketbuchung", 5464)
+Cluster 5: ("Fahrkomfort", 5007)
+Cluster 9: ("Presse", 3918)
+Cluster 1: ("Maske, Benehmen der Fahrgäste", 3575)
+Cluster 0: ("Umwelt, Müll an Bahnhöfen", 3378)
+Cluster 3: ("PR Aktionen", 2992)
