@@ -36,7 +36,7 @@ def selected_topics(model, vectorizer, top_n=10):
                         for i in topic.argsort()[:-top_n - 1:-1]])
 
 
-data = pd.read_sql("select text as comment_text from text_all where sentiment_final = -1 and source = 'facebook';", connection, index_col=None)
+data = pd.read_sql("select text as comment_text from text_all where sentiment_final = -1 and ;", connection, index_col=None)
 
 
 data = data.astype(str).apply(lambda x: x.str.encode('iso8859_15', 'ignore').str.decode('iso8859_15'))
