@@ -7,15 +7,7 @@ from scipy.stats import chi2_contingency
 from scipy.stats.contingency import association
 from scipy.stats import chi2
 from scipy.stats import pointbiserialr
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import LinearSVC
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score, precision_score, recall_score
-from sklearn.preprocessing import LabelBinarizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold
 from sklearn.metrics import roc_curve, precision_recall_curve, auc, make_scorer, recall_score, accuracy_score, precision_score, confusion_matrix
@@ -89,7 +81,7 @@ def get_stats(data, df_gas):
     fig, ax = plt.subplots(figsize=(16, 8))
     # custom db colours
     cmap = matplotlib.colors.LinearSegmentedColormap.from_list("", ["red", "white"])
-    r = associations(df_all, ax=ax, cmap=cmap, filename='heatmap_h4.png')
+    r = associations(df_all, ax=ax, cmap=cmap, filename='heatmap_h4_june.png')
 
     observed = pd.crosstab(index=df_all['neun_euro'], columns=df_all['sentiment'])
     # double check the strenght of association
@@ -110,24 +102,24 @@ def get_stats(data, df_gas):
 
 data = pd.read_sql("select case when sentiment_final = -1 then 0 else 1 end as sentiment, "
                    "case when likes is null then 0 else likes end as likes, "
-                   "case when regio is null then 0 else 1 end as regio"
-                   ", date(post_date) as post_date,"
+                   "regio, "
+                   "date(post_date) as post_date,"
                    " case when post_date between '2019-04-01' and '2019-07-01' then 0 else 1 end as neun_euro, "
                    "hour(post_date) as post_hour, "
                    "case when weekday(post_date) in (5,6) or cast(post_date as date)  "
                    "in (select holiday from holidays) then 1 else 0 end as frei "
                    "from text_all t "
-                   "where (post_date between '2019-04-01' and '2019-07-01') "
-                   "or (post_date between '2022-04-01' and '2022-07-01') and sentiment_final <> 0 "
+                   "where (post_date between '2019-06-01' and '2019-07-01') "
+                   "or (post_date between '2022-06-01' and '2022-07-01') and sentiment_final <> 0 "
                    ";", connection, index_col=None)
 
 # add gas prices
 df_gas = pd.read_csv('output_gas_prices.csv')
 df_gas['gas_price'] = df_gas['Diesel']*0.33 + df_gas['E10']*0.67
 df_gas.rename(columns={"Date": "post_date"}, inplace=True)
-#get_stats(data, df_gas)
+get_stats(data, df_gas)
 
-# use for binary classification the variables frei, 9-euro and post_hour
+
 X = data[['neun_euro','post_hour','frei', 'likes' , 'regio']]
 y = data['sentiment']
 X_train, X_test, y_train, y_test = train_test_split(X, y , test_size=0.25, random_state=0, stratify=y)
