@@ -6,6 +6,6 @@ Our Analysis included:
 2. Cleaning and Preprocessing
 3. Topic Modelling
 4. Sentiment Analysis
-  - lexicon-based approach with textblob-de
-  - transformer models from https://huggingface.co
+   - lexicon-based approach with textblob-de
+   - transformer models from https://huggingface.co
 5. Classification for identifying influence factors on public opinion in social media
