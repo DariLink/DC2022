@@ -1,5 +1,5 @@
-## Our Reporsitory to the Course Data Challenges 2022 (Goethe University Frankfurt)
-We did a in-depth analysis of the social media perception of the company Deutsche Bahn. 
+## Our reporsitory to the course Data Challenges 2022 (Goethe University Frankfurt)
+We did a in-depth analysis of the social media perception of the company *Deutsche Bahn*. 
 
 Our Analysis included:
 1. Crawling Data from Social Media (Twitter, Facebook, Instagram) 
