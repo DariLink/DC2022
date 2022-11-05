@@ -28,9 +28,6 @@ cursor= connection.cursor()
 
 #extract list of media ids
 cl = Client()
-#cl.login('chaldav94', 'dcdc2022')  Bot No.1
-#cl.login('kathrinmueller2003', 'dcdc2022')   Bot No.2
-#
 
 ### Get list of Media ids for this account for scraping by id later ###
 
