@@ -1,9 +1,13 @@
 import mariadb
 import pandas as pd
 
+from Web_Scraping.get_fb import get_credentials
+
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }

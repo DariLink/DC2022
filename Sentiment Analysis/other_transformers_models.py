@@ -6,12 +6,23 @@ import pandas as pd
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
+from Web_Scraping.get_fb import get_credentials
+
 """
 This module preprocess and does the sentiment analysis with the pretrained transfomer models from
 hugging face
 These Models are: deepset/bert-base-german-cased-sentiment-Germeval17
                 and JP040/bert-german-sentiment-twitter
 """
+
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
+conn_params = {
+    "user": user_db,
+    "password": password_db,
+    "host": "localhost",
+    "database": "dc"
+}
 
 
 class SentimentModel():
@@ -64,13 +75,6 @@ class SentimentModel():
 # "deepset/bert-base-german-cased-sentiment-Germeval17"
 model = SentimentModel('JP040/bert-german-sentiment-twitter')
 
-# '''
-conn_params = {
-    "user": "user1",
-    "password": "karten",
-    "host": "localhost",
-    "database": "dc"
-}
 connection = mariadb.connect(**conn_params)
 cursor = connection.cursor()
 

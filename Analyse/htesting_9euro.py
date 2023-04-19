@@ -12,6 +12,8 @@ from sklearn.metrics import recall_score, accuracy_score, precision_score, confu
 from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold
 from sklearn.preprocessing import StandardScaler
 
+from Web_Scraping.get_fb import get_credentials
+
 """
 This script processes the analysis for the H3 & H4. The objective is to test whether the price decrease had
 negative or positive effect on the sentiment.
@@ -26,9 +28,11 @@ likes: how many likes has this post?
 
 """
 
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }

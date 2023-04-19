@@ -3,22 +3,26 @@ import pandas as pd
 import torch
 from germansentiment import SentimentModel
 
+from Web_Scraping.get_fb import get_credentials
+
 """
 get sentiment for the stores tweets & comments with this BERT Model: 
 https://github.com/oliverguhr/german-sentiment-lib
 """
 
-model = SentimentModel()
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
 
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }
+
 connection = mariadb.connect(**conn_params)
 cursor = connection.cursor()
 
+model = SentimentModel()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # apply sentiment analysis to every row in table, store result in table

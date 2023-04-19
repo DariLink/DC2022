@@ -7,6 +7,8 @@ import pandas as pd
 import spacy
 from gsdmm import MovieGroupProcess
 
+from Web_Scraping.get_fb import get_credentials
+
 """
 This module preprocesses text and allocate the words to k topics with the gsdmm module: 
 https://github.com/rwalk/gsdmm
@@ -14,9 +16,11 @@ First topic modelling was tested with LDA but it seems like gsdmm is more suitab
 Result: k topics with 15 most common words.
 """
 
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }

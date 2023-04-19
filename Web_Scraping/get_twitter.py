@@ -8,6 +8,7 @@ logging.basicConfig(filename='Twitter.log', encoding='utf-8', level=logging.DEBU
 from random import randint
 import time
 import mariadb
+from get_fb import get_credentials
 
 """
 Get tweets from twitter
@@ -15,9 +16,11 @@ Get tweets from twitter
 2. by referred account to: @DB_Bahn, @DB_Presse, @DB_Info
 """
 
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }

@@ -15,9 +15,24 @@ This script crawls comments from fb posts of deutsche bahn accounts: DeutscheBah
 2. get comments from post ids and save them
 """
 
+
+def get_credentials():
+    f = open("account.txt", "r")
+    lines = f.readlines()
+    cookies_path = lines[0]
+    user_db = lines[1]
+    password_db = lines[2]
+    user_ig = lines[3]
+    password_ig = lines[4]
+    f.close()
+    return cookies_path, user_db, password_db, user_ig, password_ig
+
+
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }
@@ -33,7 +48,7 @@ list_postids = []
 def get_post_ids():
     for pages in range(1,1000):
             for post in fb.get_posts('DBPersonenverkehr',
-                                     cookies = "/Users/darialinke/Downloads/facebook.com_cookies_dc.txt",
+                                     cookies = cookies_path,
                                      page_limit=1000,
                                      ):
                 try:
@@ -53,7 +68,7 @@ get_post_ids()
 
 ############# get comments by post id and save them in db ####
 
-fb.set_cookies("/Users/darialinke/Downloads/facebook.com_cookies_dc.txt")
+fb.set_cookies(cookies_path)
 comments = []
 start_url = None
 

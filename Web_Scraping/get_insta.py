@@ -8,6 +8,7 @@ from instagrapi import Client, exceptions
 logging.basicConfig(filename='insta.log', encoding='utf-8', level=logging.DEBUG)
 import time
 from random import randint
+from get_fb import get_credentials
 
 """
 This script crawls comments from instagram posts of deutsche bahn accounts: DeutscheBahn & DBPersonenverkehr
@@ -15,9 +16,11 @@ This script crawls comments from instagram posts of deutsche bahn accounts: Deut
 2. get comments from media ids and save them
 """
 
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }
@@ -27,15 +30,14 @@ cursor = connection.cursor()
 
 # extract list of media ids
 cl = Client()
+cl.login(user_ig, password_ig)
 
 ### Get list of Media ids for this account for scraping by id later ###
 
 ''' 
 #user_id = cl.user_id_from_username("deutschebahn")
-#print(user_id)
 #userids: 7013356314, 485977342
 medias = cl.user_medias(7013356314)
-#print(medias)
 pickle.dump(medias, open( "save_ig_07.p", "wb" ))
 
 #'''

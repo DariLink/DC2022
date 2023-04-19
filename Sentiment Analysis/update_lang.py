@@ -7,15 +7,18 @@ import spacy
 warnings.filterwarnings('ignore')
 from spacy.language import Language
 from spacy_langdetect import LanguageDetector
+from Web_Scraping.get_fb import get_credentials
 
 '''
 update entries where spacy cannot identify the language as german, 
 these are excluded from topic modelling & sentiment Analysis
 '''
 
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }

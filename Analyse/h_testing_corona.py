@@ -5,6 +5,8 @@ import pandas as pd
 from dython.nominal import associations
 from scipy.stats import pointbiserialr
 
+from Web_Scraping.get_fb import get_credentials
+
 """
 This script processes the analysis for the H5. The decreased capacity is approximated by corona incidence.
 This is only valid for the first lockdows in spring 2020. The comparison period is March to Mai 2019. 
@@ -18,13 +20,14 @@ For the correlation between sentiment & incidency p-value (two-tailed) is calcul
 
 """
 
+cookies_path, user_db, password_db, user_ig, password_ig = get_credentials
+
 conn_params = {
-    "user": "user1",
-    "password": "karten",
+    "user": user_db,
+    "password": password_db,
     "host": "localhost",
     "database": "dc"
 }
-
 connection = mariadb.connect(**conn_params)
 cursor = connection.cursor()
 
