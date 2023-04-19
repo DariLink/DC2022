@@ -5,16 +5,15 @@ import pandas as pd
 this module get hashtags from instragramm and facebook and stores them in hastags table
 """
 
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
 
-
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
 data = pd.read_sql("select * from text_all where source <> 'twitter' and text like '%#%';", connection, index_col=None)
 
@@ -26,7 +25,7 @@ for index, row in data.iterrows():
                 data = (str(row['id']), word[1:])
                 cursor.execute(sql, data)
                 connection.commit()
-            except: # pk error, pass
+            except:  # pk error, pass
                 pass
 
 # Clean hashtags for synonyms
@@ -63,4 +62,3 @@ connection.commit()
 sql = "update ignore tweets_hashtags2 set Hashtags = 'gretathunberg' where Hashtags = 'greta';"
 cursor.execute(sql)
 connection.commit()
-

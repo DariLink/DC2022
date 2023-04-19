@@ -1,16 +1,16 @@
 import mariadb
-import pandas as pd
-import matplotlib.pyplot as plt
 import matplotlib.colors
+import matplotlib.pyplot as plt
+import pandas as pd
 from dython.nominal import associations
-from scipy.stats import chi2_contingency
-from scipy.stats.contingency import association
 from scipy.stats import chi2
+from scipy.stats import chi2_contingency
 from scipy.stats import pointbiserialr
-from sklearn.preprocessing import StandardScaler
+from scipy.stats.contingency import association
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import recall_score, accuracy_score, precision_score, confusion_matrix
 from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold
-from sklearn.metrics import roc_curve, precision_recall_curve, auc, make_scorer, recall_score, accuracy_score, precision_score, confusion_matrix
+from sklearn.preprocessing import StandardScaler
 
 """
 This script processes the analysis for the H3 & H4. The objective is to test whether the price decrease had
@@ -26,16 +26,16 @@ likes: how many likes has this post?
 
 """
 
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
 
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
 
 def grid_search_wrapper(refit_score='precision_score'):
     """
@@ -44,7 +44,7 @@ def grid_search_wrapper(refit_score='precision_score'):
     """
     skf = StratifiedKFold(n_splits=10)
     grid_search = GridSearchCV(clf, param_grid, scoring=scorers, refit=refit_score,
-                           cv=skf, return_train_score=True, n_jobs=-1)
+                               cv=skf, return_train_score=True, n_jobs=-1)
     grid_search.fit(X_train, y_train)
 
     # make the predictions
@@ -56,8 +56,9 @@ def grid_search_wrapper(refit_score='precision_score'):
     # confusion matrix on the test data.
     print('\nConfusion matrix of Random Forest optimized for {} on the test data:'.format(refit_score))
     print(pd.DataFrame(confusion_matrix(y_test, y_pred),
-                 columns=['pred_neg', 'pred_pos'], index=['neg', 'pos']))
+                       columns=['pred_neg', 'pred_pos'], index=['neg', 'pos']))
     return grid_search
+
 
 def get_p_value(contigency_df):
     stat, p, dof, expected = chi2_contingency(contigency_df)
@@ -99,7 +100,6 @@ def get_stats(data, df_gas):
     print(pbc)
 
 
-
 data = pd.read_sql("select case when sentiment_final = -1 then 0 else 1 end as sentiment, "
                    "case when likes is null then 0 else likes end as likes, "
                    "regio, "
@@ -115,14 +115,13 @@ data = pd.read_sql("select case when sentiment_final = -1 then 0 else 1 end as s
 
 # add gas prices
 df_gas = pd.read_csv('output_gas_prices.csv')
-df_gas['gas_price'] = df_gas['Diesel']*0.33 + df_gas['E10']*0.67
+df_gas['gas_price'] = df_gas['Diesel'] * 0.33 + df_gas['E10'] * 0.67
 df_gas.rename(columns={"Date": "post_date"}, inplace=True)
 get_stats(data, df_gas)
 
-
-X = data[['neun_euro','post_hour','frei', 'likes' , 'regio']]
+X = data[['neun_euro', 'post_hour', 'frei', 'likes', 'regio']]
 y = data['sentiment']
-X_train, X_test, y_train, y_test = train_test_split(X, y , test_size=0.25, random_state=0, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0, stratify=y)
 
 ss_train = StandardScaler()
 X_train = ss_train.fit_transform(X_train)
@@ -131,10 +130,10 @@ ss_test = StandardScaler()
 X_test = ss_test.fit_transform(X_test)
 
 clf = RandomForestClassifier(n_estimators=100,
-                       max_depth=3,
-                       random_state=0,
-                       max_features=3,
-                       min_samples_split=19)
+                             max_depth=3,
+                             random_state=0,
+                             max_features=3,
+                             min_samples_split=19)
 
 clf.fit(X_train, y_train)
 predictions = clf.predict(X_test)
@@ -195,4 +194,3 @@ df_model['Recall'] = recall.values()
 
 print(df_model)
 """
-

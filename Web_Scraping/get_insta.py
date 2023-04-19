@@ -1,12 +1,13 @@
-from instagrapi import Client, exceptions
-import pickle
-import mariadb
-from datetime import datetime
 import logging
+import pickle
+from datetime import datetime
+
+import mariadb
+from instagrapi import Client, exceptions
+
 logging.basicConfig(filename='insta.log', encoding='utf-8', level=logging.DEBUG)
 import time
 from random import randint
-
 
 """
 This script crawls comments from instagram posts of deutsche bahn accounts: DeutscheBahn & DBPersonenverkehr
@@ -14,19 +15,17 @@ This script crawls comments from instagram posts of deutsche bahn accounts: Deut
 2. get comments from media ids and save them
 """
 
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
 
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
-
-
-#extract list of media ids
+# extract list of media ids
 cl = Client()
 
 ### Get list of Media ids for this account for scraping by id later ###
@@ -41,14 +40,14 @@ pickle.dump(medias, open( "save_ig_07.p", "wb" ))
 
 #'''
 
-media = pickle.load( open( "save_ig_07.p", "rb" ) )
-#print(media)
+media = pickle.load(open("save_ig_07.p", "rb"))
+# print(media)
 counter_done = 1
 
-#'''
+# '''
 for i in media[0:]:
     try:
-        media_id = str(i).split()[0].replace('pk=','').replace("'",'')
+        media_id = str(i).split()[0].replace('pk=', '').replace("'", '')
         comment = cl.media_comments(media_id)
 
         for j in comment:
@@ -56,7 +55,7 @@ for i in media[0:]:
             comment_id = comment_dict['pk']
             comment_time = comment_dict['created_at_utc'].strftime("%Y-%m-%d %H:%M:%S")
             comment_text = comment_dict['text']
-            comment_user = str(comment_dict['user'])[4:14].replace("'",'')
+            comment_user = str(comment_dict['user'])[4:14].replace("'", '')
             likes_count = comment_dict['like_count']
             print(comment_time)
             try:
@@ -71,7 +70,7 @@ for i in media[0:]:
                 logging.exception("message")
 
         print('post done')
-        counter_done+=1
+        counter_done += 1
         print(counter_done)
         time.sleep(randint(10, 40))
     except exceptions.PleaseWaitFewMinutes:
@@ -80,13 +79,4 @@ for i in media[0:]:
 
 logging.shutdown()
 #
-#'''
-
-
-
-
-
-
-
-
-
+# '''

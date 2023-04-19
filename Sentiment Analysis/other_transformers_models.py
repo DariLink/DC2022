@@ -1,10 +1,10 @@
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-from typing import List
-import torch
 import re
+from typing import List
+
 import mariadb
 import pandas as pd
-
+import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 """
 This module preprocess and does the sentiment analysis with the pretrained transfomer models from
@@ -61,30 +61,30 @@ class SentimentModel():
         return text
 
 
-
-#"deepset/bert-base-german-cased-sentiment-Germeval17"
+# "deepset/bert-base-german-cased-sentiment-Germeval17"
 model = SentimentModel('JP040/bert-german-sentiment-twitter')
 
-#'''
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+# '''
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
 # apply sentiment analysis to every row in table, store result in table
-data = pd.read_sql("select text as tweet, id as id from text_all where germtwit is null order by post_date asc;", connection, index_col=None)
+data = pd.read_sql("select text as tweet, id as id from text_all where germtwit is null order by post_date asc;",
+                   connection, index_col=None)
 
 for index, row in data.iterrows():
     list_tweet = []
     list_tweet.append(str(row['tweet']))
     sentiment = model.predict_sentiment(list_tweet)
-    #sql = "update text_all set germval = ? where id = ?"
+    # sql = "update text_all set germval = ? where id = ?"
     sql = "update text_all set germtwit = ? where id = ?"
     data = (str(sentiment[0]), str(row['id']))
     cursor.execute(sql, data)
     connection.commit()
-#'''
+# '''

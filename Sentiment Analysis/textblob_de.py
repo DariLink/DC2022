@@ -1,12 +1,15 @@
-from textblob_de import TextBlobDE as TextBlob
 import re
+
 import mariadb
 import pandas as pd
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+
+from textblob_de import TextBlobDE as TextBlob
+
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
 
 """
@@ -15,8 +18,8 @@ Textblob is lexicon based approach. The file with prior polarities was modified 
 polarities from emojis.
 """
 
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
 
 def text_preprocess(text):
@@ -33,14 +36,8 @@ for index, row in data.iterrows():
     text_pre = text_preprocess(row['text'])
     blob = TextBlob(text_pre)
     print(text_pre)
-    print(round(blob.sentiment.polarity,2))
+    print(round(blob.sentiment.polarity, 2))
     sql = "update text_all set textblob = ? where id = ?"
-    data = (round(blob.sentiment.polarity,2), str(row['id']))
+    data = (round(blob.sentiment.polarity, 2), str(row['id']))
     cursor.execute(sql, data)
     connection.commit()
-
-
-
-
-
-

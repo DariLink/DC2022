@@ -1,7 +1,5 @@
-import plotly
-import plotly.express as px
 import pandas as pd
-import plotly.graph_objects as go
+import plotly.express as px
 
 # simple graphs for exploratory data analysis
 
@@ -10,7 +8,7 @@ import plotly.graph_objects as go
 # amounts of posts per sentiment per source
 
 posts_amt = {
-    "source": ["Facebook", "Facebook", "Facebook", "Instagram", "Instagram", "Instagram", 
+    "source": ["Facebook", "Facebook", "Facebook", "Instagram", "Instagram", "Instagram",
                "Twitter", "Twitter", "Twitter"],
     "sentiment": ["Negativ", "Neutral", "Positiv", "Negativ", "Neutral", "Positiv",
                   "Negativ", "Neutral", "Positiv"],
@@ -22,17 +20,17 @@ posts_amt_df = pd.DataFrame(
 )
 
 fig_sentiment_amt = px.bar(
-    posts_amt_df, 
-    x="source", 
-    y="amount", 
+    posts_amt_df,
+    x="source",
+    y="amount",
     title="Anzahl der Beiträge pro Plattform und Sentiment",
-    color_discrete_sequence=["#DC143C", "#DCDCDC", "#B0C4DE"], 
+    color_discrete_sequence=["#DC143C", "#DCDCDC", "#B0C4DE"],
     barmode="stack"
 )
 fig_sentiment_amt.update_layout({
     "plot_bgcolor": "rgba(0, 0, 0, 0)",
     "paper_bgcolor": "rgba(0, 0, 0, 0)"
-    }
+}
 )
 fig_sentiment_amt.update_layout(
     title_x=0.5
@@ -68,7 +66,7 @@ fig_sb.update_layout(
 # simple graphs for the results of topic modelling
 # facebook:
 fb_negative = [
-    ("Verspätung/Zuverlässigkeit", 33763), 
+    ("Verspätung/Zuverlässigkeit", 33763),
     ("Ticketbuchung", 12425),
     ("Streik", 10905),
     ("Leder, Tierschutz", 10449),
@@ -219,9 +217,8 @@ tw_positive = [
     ("Kundenservice", 10159),
     ("Fahrkomfort/Ausstattung/Personal", 9564),
     ("Ticketbuchung", 2356),
-    ("Modernisierung Bahnhöfe und Streckennetz", 1719) 
+    ("Modernisierung Bahnhöfe und Streckennetz", 1719)
 ]
-
 
 # create dataframes for each sentiment
 tw_negative_df = pd.DataFrame(tw_negative, columns=["Thema", "Anzahl der Beiträge"])

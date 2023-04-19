@@ -1,13 +1,13 @@
-import facebook_scraper as fb
-import pickle
-import time
-from random import randint
-import mariadb
-from mariadb import IntegrityError
-import pandas as pd
-from datetime import datetime
 import logging
 import sys
+import time
+from datetime import datetime
+from random import randint
+
+import facebook_scraper as fb
+import mariadb
+import pandas as pd
+from mariadb import IntegrityError
 
 """
 This script crawls comments from fb posts of deutsche bahn accounts: DeutscheBahn & DBPersonenverkehr
@@ -15,15 +15,15 @@ This script crawls comments from fb posts of deutsche bahn accounts: DeutscheBah
 2. get comments from post ids and save them
 """
 
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
 
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
 ### get post by post id for later extracting the comments by the post ids####
 
@@ -67,11 +67,11 @@ def extract_info(comment, date_post):
     single_comment.append(comment['commenter_id'])
     single_comment.append(comment['comment_text'])
 
-    if comment['comment_time'] is not None: # if comment has no date, take the post date
+    if comment['comment_time'] is not None:  # if comment has no date, take the post date
         single_comment.append(comment['comment_time'].strftime("%Y-%m-%d %H:%M:%S"))
     else:
         single_comment.append(date_post.strftime("%Y-%m-%d %H:%M:%S"))
-    if comment['comment_reactions'] != None: # extract comment reactions
+    if comment['comment_reactions'] != None:  # extract comment reactions
         for r in lst_reactions:
             single_comment.append(get_reaction(r, comment['comment_reactions']))
     else:
@@ -80,10 +80,11 @@ def extract_info(comment, date_post):
 
 
 def get_reaction(r, reaction_dict):
-        if r in reaction_dict:
-            return reaction_dict[r] # get number of reactions for a particular reaction type
-        else:
-            return 0
+    if r in reaction_dict:
+        return reaction_dict[r]  # get number of reactions for a particular reaction type
+    else:
+        return 0
+
 
 def handle_pagination_url(url):
     global start_url
@@ -99,15 +100,14 @@ post_id = pd.read_sql("select post_id from fb_post_id where post_id not in "
                       , connection, index_col=None)
 post_ids = post_id.values.tolist()
 
-
 for i in post_ids:
     for post in fb.get_posts(
-                post_urls = i,
-                options={
-                    "comments": "generator",
-                    "reactions": True,
-                },
-            ):
+            post_urls=i,
+            options={
+                "comments": "generator",
+                "reactions": True,
+            },
+    ):
         try:
             comments_raw = post["comments_full"]
             date_post = post["time"]
@@ -116,38 +116,40 @@ for i in post_ids:
             if date_post < datetime.strptime('2019-03-01', '%Y-%m-%d'):
                 continue
             for comment in comments_raw:
-                    list_comment = extract_info(comment, date_post)
-                       # insert into mariadb
+                list_comment = extract_info(comment, date_post)
+                # insert into mariadb
+                try:
+                    sql = 'INSERT INTO facebook (comment_id, commenter_id, comment_text, comment_time, r_like, ' \
+                          'haha, wow, yay, sad, angry, love, post_id ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)'
+                    data = (
+                        list_comment[0], list_comment[1], list_comment[2], list_comment[3], list_comment[4],
+                        list_comment[5],
+                        list_comment[6], list_comment[7], list_comment[8], list_comment[9], list_comment[10], post_id)
+                    cursor.execute(sql, data)
+                    connection.commit()
+                except IntegrityError:
+                    pass
+                    print('already in db')
+
+                ### get also comments replies ####
+                for k in comment['replies']:
+                    list_comment = extract_info(k, date_post)
                     try:
                         sql = 'INSERT INTO facebook (comment_id, commenter_id, comment_text, comment_time, r_like, ' \
-                              'haha, wow, yay, sad, angry, love, post_id ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)'
+                              'haha, wow, yay, sad, angry, love ) VALUES (?,?,?,?,?,?,?,?,?,?,?)'
                         data = (
-                        list_comment[0], list_comment[1], list_comment[2], list_comment[3], list_comment[4], list_comment[5],
-                        list_comment[6], list_comment[7], list_comment[8], list_comment[9], list_comment[10], post_id)
+                            list_comment[0], list_comment[1], list_comment[2], list_comment[3], list_comment[4],
+                            list_comment[5],
+                            list_comment[6], list_comment[7], list_comment[8], list_comment[9], list_comment[10])
                         cursor.execute(sql, data)
                         connection.commit()
                     except IntegrityError:
                         pass
                         print('already in db')
 
-                    ### get also comments replies ####
-                    for k in comment['replies']:
-                        list_comment = extract_info(k, date_post)
-                        try:
-                            sql = 'INSERT INTO facebook (comment_id, commenter_id, comment_text, comment_time, r_like, ' \
-                                  'haha, wow, yay, sad, angry, love ) VALUES (?,?,?,?,?,?,?,?,?,?,?)'
-                            data = (
-                            list_comment[0], list_comment[1], list_comment[2], list_comment[3], list_comment[4], list_comment[5],
-                            list_comment[6], list_comment[7], list_comment[8], list_comment[9], list_comment[10])
-                            cursor.execute(sql, data)
-                            connection.commit()
-                        except IntegrityError:
-                            pass
-                            print('already in db')
-
             time.sleep(randint(5, 15))
             logging.info("All done")
-            counter_post+=1
+            counter_post += 1
             logging.info(i)
             print('post done')
 
@@ -156,6 +158,3 @@ for i in post_ids:
             sys.exit()
         except KeyError:
             continue
-
-
-

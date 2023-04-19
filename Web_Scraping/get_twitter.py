@@ -1,13 +1,13 @@
-import twint
-import pandas as pd
+import logging
 from datetime import datetime
 from datetime import timedelta
-import logging
+
+import twint
+
 logging.basicConfig(filename='Twitter.log', encoding='utf-8', level=logging.DEBUG)
 from random import randint
 import time
 import mariadb
-
 
 """
 Get tweets from twitter
@@ -15,22 +15,23 @@ Get tweets from twitter
 2. by referred account to: @DB_Bahn, @DB_Presse, @DB_Info
 """
 
-conn_params= {
-    "user" : "user1",
-    "password" : "karten",
-    "host" : "localhost",
-    "database" : "dc"
+conn_params = {
+    "user": "user1",
+    "password": "karten",
+    "host": "localhost",
+    "database": "dc"
 }
 
-connection= mariadb.connect(**conn_params)
-cursor= connection.cursor()
+connection = mariadb.connect(**conn_params)
+cursor = connection.cursor()
 
-#@DB_Bahn, @DB_Presse, @DB_Info, @DB_Karriere  # accounts to be excluded in the analysis
-#39999078, 18565652, 14330924, 19482674
+# @DB_Bahn, @DB_Presse, @DB_Info, @DB_Karriere  # accounts to be excluded in the analysis
+# 39999078, 18565652, 14330924, 19482674
 c = twint.Config()
 c.Username = "DB_Info"
-#twint.run.Lookup(c)
 
+
+# twint.run.Lookup(c)
 
 
 def get_tweets_by_date(date, b_hashtag, hashtag, to, cursor, connection):
@@ -42,19 +43,19 @@ def get_tweets_by_date(date, b_hashtag, hashtag, to, cursor, connection):
     c.Store_object = True
     c.Since = date
     c.Lang = 'de'
-    c.Until = str(datetime.strptime(date, '%Y-%m-%d')+ timedelta(days=1))[:10]
-    c.Pandas =True
+    c.Until = str(datetime.strptime(date, '%Y-%m-%d') + timedelta(days=1))[:10]
+    c.Pandas = True
     c.Proxy_host = 'tor'
     c.Tor_control_port = 9051
     c.Tor_control_password = "16:9AEBD4E3F882CD29603CA439DE7A629D49C81DD432A73EF56029A70A28"
-    #c.Limit = 10
+    # c.Limit = 10
 
     twint.run.Search(c)
 
     df_tweet = twint.storage.panda.Tweets_df
 
-    df_clean =  df_tweet[["id","conversation_id","date", "tweet","hashtags","user_id",
-                    "retweet","nlikes","nreplies","nretweets","near","geo"]]
+    df_clean = df_tweet[["id", "conversation_id", "date", "tweet", "hashtags", "user_id",
+                         "retweet", "nlikes", "nreplies", "nretweets", "near", "geo"]]
     df_clean = df_clean.astype({'id': int, 'conversation_id': int, 'user_id': int, 'nlikes': int, 'nreplies': int})
 
     for index, row in df_clean.iterrows():
@@ -92,13 +93,13 @@ def get_tweets_by_date(date, b_hashtag, hashtag, to, cursor, connection):
 # accounts: @DB_Bahn, @DB_Presse, @DB_Info
 # hashtags: #deutschebahn, #db
 
-#hashtag = '(#DB) lang:de'
+# hashtag = '(#DB) lang:de'
 
 date = '2022-06-04'
 b_hashtag = False
 hashtag = '(#DB) lang:de'
 to = '@DB_Bahn'
-#'''
+# '''
 while datetime.strptime(date, '%Y-%m-%d') < datetime.now():
     try:
         get_tweets_by_date(date, b_hashtag, hashtag, to, cursor, connection)
@@ -106,9 +107,4 @@ while datetime.strptime(date, '%Y-%m-%d') < datetime.now():
     except:
         time.sleep(randint(30, 100))
 
-
-
 logging.shutdown()
-
-
-
